@@ -1,0 +1,65 @@
+*{
+    padding: 0.5% 0% 0% 0.5%;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: beige;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor:context-menu;
+}
+
+.ram_mandir , .Kanak_bhawan, .Ram_ki_paidi, .Hanuma_garhi h2{
+    font-size: 60px;
+    text-align: center;
+    cursor:context-menu;
+}
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+
+.gallery img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+     cursor:context-menu;
+    transition: 0.4s ease-in-out;   
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-description {
+    position: absolute;
+    font-size: 12px;
+    bottom: -100%; /* initially hidden below the image */
+    left: 0;
+    width: 95%;
+    background-color: rgba(255, 178, 84, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: translateY(-10px); /* Move the image up a bit on hover */
+}
+
+.image-container:hover .image-description {
+    bottom: 0; /* Show the description below the image on hover */
+}
+
+.image-description a{
+    color: white;
+    text-decoration: none;
+    background: none;
+}
