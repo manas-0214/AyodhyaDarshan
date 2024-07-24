@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 header{
@@ -36,6 +38,15 @@ nav .menu{
     justify-content: space-around;
 
 }
+nav .menu a:nth-last-child(1){
+    background: grey;
+    border-radius: 20px;
+    padding-left: 30px;
+    color: #eee;
+    font-size: 15px;
+    margin-right: 10px;
+    
+}
 nav .menu a{
     width: 25%;
     text-decoration: none;
@@ -48,6 +59,10 @@ nav .menu a:hover{
     color:rgba(236, 117, 62) ;
 }
 
+header nav .fa-ellipsis{
+ display: none;
+}
+
 main{
     width: 100%;
     height: 85vh;
@@ -56,6 +71,7 @@ main{
     align-items: center;
     text-align: center;
 }
+
 
 section{
     color: white;
@@ -212,7 +228,7 @@ section a:hover{
 .read-more:hover{
     background-color: rgba(255, 255, 255, 0.4);
     color: #000;
-    font-weight: bold;
+    /* font-weight: bold; */
     border:1px solid rgba(236, 117, 62);
     text-shadow: 1px 1px 2px;
     text-shadow: none;
@@ -293,3 +309,244 @@ img{
     text-shadow: 1px 1px 2px;
     text-shadow: none;
 }
+.offers{
+    width: 60%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 100px;
+}
+.offers h1{
+font-weight: 600;
+text-align: center;
+margin: 0;
+}
+
+.offers p{
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+.offers .cards{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+}
+
+.offers .cards .card{
+    position: relative;
+    width: 260px;
+    height: 360px;
+    /* border: 1px solid black; */
+    /* margin: 10px; */
+}
+
+
+.offers .cards .card h3{
+ width: 140px;
+ padding: 6px 0px;
+ background-color: rgba(236, 117, 62) ;
+ border-radius: 20px;
+ font-size: 12px;
+ display: grid;
+ place-items: center;
+ margin: auto;
+ margin-top: 5px;
+}
+
+.offers .cards .card .img_text{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.offers .cards .card .img_text img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.offers .cards .card .img_text h4{
+    position: absolute;
+    font-size: 9px;
+    padding: 10px 15px;
+    bottom: 0;
+    margin: 0px;
+    color: rgb(229, 255, 32);
+    z-index: 2;
+    text-align: center;
+}
+
+.offers .cards .card .img_text h4:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+}
+
+.offers .cards .card .content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(170, 170, 170);
+    padding: 5px 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.offers .cards .card .content .price, .days{
+    margin: 0px 8px;
+
+}
+
+.offers .cards .card .content .price .heart_chat{
+    display: flex;
+    align-items: center;
+
+}
+
+.offers .cards .card .content .price .heart_chat i:nth-child(1){
+    color:red;
+    font-size: 13px;
+    margin: 10px;    
+}
+
+.offers .cards .card .content .price .heart_chat i span{
+    color: black ;
+    font-size: 12px;
+    margin-left: 3px;
+    font-style: normal;
+}
+
+.offers .cards .card .content .price .heart_chat i:nth-child(2){
+    color: rgb(112,196,229);
+    font-size: 13px;
+    margin: 10px;    
+}
+
+.offers .cards .card .content .price .info_price{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.offers .cards .card .content .price .info_price a{
+   text-decoration: none;
+   color: black;
+   font-weight: 700;
+   font-size: 11px;
+   transition: .3s linear;
+   margin-right: 13px;
+}
+
+.offers .cards .card .content .price .info_price a:hover{
+    color: grey;
+
+}
+
+.offers .cards .card .content .price .info_price h4{
+    margin: 0;
+    font-size: 13px;
+    
+}
+
+.offers .cards .card .content .days{
+    color: white;
+    background: black;
+    font-size: 8px;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s linear;
+    
+}
+
+.offers .cards .card .content .days:hover{
+    transform: rotate(360deg);
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: antiquewhite;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer h2{
+    text-align: center;
+    margin: 0;
+    margin-top: 25px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+footer p{
+    text-align: center;
+    width:400px;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer .input{
+    box-shadow: 0px 3px 20px -1px grey;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+}
+footer .input input{
+   padding: 10px 20px;
+   border: none;
+   outline: none;
+   font-size: 12px;
+   border-radius: 20px 0px 0px 20px;
+
+}
+
+footer .input button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  border-radius: 0px 20px 20px 0px;
+  background-color: black;
+  color:white ;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+footer .input button:hover{
+   background: grey; 
+}
+
+footer .contact{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+footer .contact .fa-whatsapp{
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+footer .contact .fa-instagram{
+    font-size: 15px;
+    margin-right: 8px; 
+}
+
